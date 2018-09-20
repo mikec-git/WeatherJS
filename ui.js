@@ -12,7 +12,7 @@ class UI {
     }
 
     paint(weather) {
-        this.location.textContent = weather.name;
+        this.location.textContent = weather.name + ", " + weather.sys.country;
         this.desc.textContent = weather.weather[0].description;
         this.string.innerHTML = (weather.main.temp-273.15).toFixed(2)  + '&deg;C';
         this.icon.setAttribute('src', `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`);
